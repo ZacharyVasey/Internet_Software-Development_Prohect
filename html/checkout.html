@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <title>Checkout</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="../css/gameStart.css">
+        <script src="../js/checkoutJS.js" type="text/javascript"></script>
+    </head>
+    <body onload="Loaded()">
+        <h1>Checkout</h1>
+        <div id="cartPrice">    
+            Total Shopping Amount: $<span id="checkoutShopAmnt"></span><br>
+            <br>Total Tax: $<span id="tax"></span><br>
+            <br>Total Shipping Charges: $<span id="shipping"></span><br>
+            <br>Total Amount Due: $<span id="totalCheckout"></span><br>
+        </div>
+        <form name="checkoutForm" action="../php/paymentinformation.php" method="post" onsubmit="return checkoutValidation()">
+            <div id="payment">
+                <br>Select Payment Type:<br>
+                    <select name="paymentSelect" required>
+                        <option value="" disabled selected>Select Card</option>
+                        <option value="visa"> VISA</option>
+                        <option value="masterCard">MasterCard</option>
+                        <option value="americanExpress">American Express</option>
+                    </select><br>
+        
+                <br>Card Number<br>
+                    <input type ="text" name="cardNumberTxt" placeholder="1111222233334444" required><br>
+                <br>Card Expiration<br>
+                    <input type ="text" name="cardExpirationTxt" placeholder="01/2021" required><br>
+                <br><input type ="checkbox" name="authorizeCheckBox" required>
+                    I agree and authorize the amount to be charged to my credit card. <br>
+                <br>
+                <button class='button' onclick="previousPage()">Previous
+                    </button>
+                <input class='button' type="submit" value="Submit Order"><br>  
+                <input id="total" name="total" class="invis" readonly>
+            </div>
+        </form>
+    </body>
+</html>

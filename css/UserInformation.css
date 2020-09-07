@@ -1,0 +1,10 @@
+body {
+	background-color: #white;
+	color: black;
+}
+table {
+	border-spacing: 5px;
+}
+th {
+  text-align: left;
+}

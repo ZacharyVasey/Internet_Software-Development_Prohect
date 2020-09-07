@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <link rel="stylesheet" type="text/css" href="../css/gameStart.css">
+		<script src="jquery-3.4.1.js"></script>
+		<script src="../js/loadStatesandUser.js" type="text/javascript"></script>
+		<script src="../js/userInfoValidate.js" type="text/javascript"></script>
+		<title>Page Title</title>
+		<link rel="stylesheet" type="text/css" href="../css/UserInformation.css">
+</head>
+<body onload="loadStates()">
+	<h1>User Information</h1>
+<form name="userInformationForm" onsubmit="return(userInfoValidation())" action="../php/submit_userinformation.php" method="post">
+	<table>
+		<tr>
+			<th>Full Name:</th>
+			<th><input type="text" id="fullname" name="fullName" maxlength="100" required><th>
+		</tr>
+		<tr>
+			<th>Address 1:</th>
+			<th><input type="text" id="address1" name="address_1" maxlength="100" required></th>
+		</tr>
+		<tr>
+			<th>Address 2:</th>
+			<th><input type="text" id="address2" name="address_2" maxlength="100"></th>
+		</tr>
+		<tr>
+			<th>City:</th>
+			<th><input type="text" id="city" name="city" maxlength="100" required></th>
+		</tr>
+		<tr>
+			<th>State:</th>
+			<th><select id = "stateList" name="state" required>
+				<option value="" disabled selected="selected">Select State</option>
+			</select></th>
+		</tr>
+                <tr>
+			<th>Zip Code:</th>
+			<th><input type="text" id="zip" name="zip" maxlength="9" minlength="5" required></th>
+		</tr>
+		<tr>
+			<th>Phone:</th>
+			<th><input id="phoneNumberTxt" type="tel" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" title="***-***-****" required></th>
+		</tr>
+		<tr>
+			<th>Email:</th>
+			<th><input id="emailTxt" type="email" name="email" required></th>
+		</tr>
+	</table>
+                <br><button type="submit" class="button">Next</button>
+			<button type="reset" class="redbutton">Empty Information</button>
+</form>
+</body>
+</html>

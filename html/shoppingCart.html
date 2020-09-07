@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../css/gameStart.css">
+		<script src="jquery-3.4.1.js"></script>
+        <script src="../js/shoppingCartJS.js" type="text/javascript"></script>
+        <title>Cart</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body onload="showProducts(); printCart()">
+        <h1>Shopping Cart</h1>
+        <div>
+<<<<<<< HEAD
+        <form action="../php/addCart.php" method="POST" onsubmit="return checkValues()">
+           Select Product:<br>
+           <select name="gamePrice" id="gameValue" onchange="selectItem(this)">
+		     	<option  value="" disabled selected>Select Item</option>        </select><br>
+           <br>Units<br>
+           <input type ="number" min="1" name="units" id="units" onchange="selectUnits(this.value)"><br>
+           <br>Unit Price: $<span id="unitPrice"></span><br>
+           <br><button class='button' onclick="previousPage()">Previous
+           </button>
+           <button type="submit" id="addToCartBtn" class='button' >Add To Cart</button><br>
+        </form>
+=======
+            Select Product:<br>
+        <select name="gameTitle" id="gameValue" onchange="selectItem(this)">
+			<option  value="" disabled selected>Select Item</option>        </select><br>
+        <br>Units<br>
+        <input type ="number" min="1" name="units" id="units" onchange="selectUnits(this.value)"><br>
+        <br>Unit Price: $<span id="unitPrice"></span><br>
+        <br><button id="addToCartBtn" class='button'>Add To Cart</button><br>
+       
+>>>>>>> 2e2d8b91ed82376f6af28c57af69f000bd4e1300
+        </div>
+        <div id='cartItems'>
+            <br>Items in cart:<br>
+            <table id="cart">
+                <tr>
+                    <th>Item</th>
+                    <th>Units</th>
+                    <th>Price</th>
+                </tr>
+            </table>
+             
+            <br>Total: $<span id="totalCart"></span><br>
+            <br><button id="checkoutBtn" class='button'>Checkout</button>
+            <form action="../php/emptyCart.php" method="POST">
+                <button type="submit" id="emptyCart" class='emptyBtn'>Empty Cart</button><br><br>
+            </form>
+
+        </div>
+    </body>
+</html>

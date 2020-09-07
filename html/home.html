@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>GameStart</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="../css/gameStart.css">
+        <script src="../js/home.js" type="text/javascript"></script>
+
+
+    </head>
+    
+    <body onload="load()">
+        <div class="header">
+             GAME<span>START</span>
+        </div>
+        
+        <!-- Menu Navigation Bar --->
+        <div class="menu"> 
+            <ul> 
+
+                <li><a href="../html/UserInformation.html" target="bodyDisplay">User Info</a></li> 
+                <li><a href="../html/shoppingCart.html" target="bodyDisplay" >Shopping Cart</a></li> 
+                <li><a href="../html/shippingInformation.html" target="bodyDisplay">Shipping Info</a></li> 
+                <li><a href="../html/checkout.html" target="bodyDisplay">Checkout</a></li>
+                
+            </ul>
+            <form action="../php/logout.php" method="POST">
+               <button type="submit" class="logout">Logout</button>
+            </form>
+<<<<<<< HEAD
+
+            <form action="../php/newOrder.php" method="POST">
+                <button type="submit" class="newOrderButton" id="newOrderBtn" onclick="load()">Create New Order</button>
+            </form>
+            
+=======
+            <button class="newOrderButton" id="newOrderBtn">Create New Order</button>
+>>>>>>> 2e2d8b91ed82376f6af28c57af69f000bd4e1300
+        </div> 
+        
+        <div class="body_sec">
+            <iframe src="../html/UserInformation.html" id="bodyFrame" name="bodyDisplay" scrolling="no" frameborder="0" ></iframe>
+        </div>
+        
+        
+        <div class="footer">
+                GAME<span>START</span>
+        </div>
+             
+    </body>
+</html>

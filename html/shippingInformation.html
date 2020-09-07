@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+		<link rel="stylesheet" type="text/css" href="../css/gameStart.css">
+		<link rel="stylesheet" type="text/css" href="../css/UserInformation.css">
+		<script src="jquery-3.4.1.js"></script>
+		<script src="../js/loadStatesJS.js" type="text/javascript"></script>
+		<script src="../js/loadShippingInfo.js" type="text/javascript"></script>
+
+	<title>Page Title</title>
+</head>
+<body onload="loadStates()">
+	<h1>Shipping Information</h1>
+<form name="shippingInfoForm" action="../php/submit_shippinginformation.php" method="post">
+    Shipping address same as user address? <br>
+    <input type="checkbox" id="checkbox" name="yes" value="Yes" onclick="loadShipInfo()">Yes<br><br>
+
+	<table>
+		
+		<tr>
+			<th>Address 1:</th>
+			<th><input id="address1" type="text" name="address_1" maxlength="100" required></th>
+		</tr>
+		<tr>
+			<th>Address 2:</th>
+			<th><input id="address2" type="text" name="address_2" maxlength="100"></th>
+		</tr>
+		<tr>
+			<th>City:</th>
+			<th><input id="city" type="text" name="city" maxlength="100" required></th>
+		</tr>
+		<tr>
+			<th>State:</th>
+			<th><select id="stateList" name="state" required>
+				<option value="" disabled selected="selected">Select State</option>
+			</select></th>
+		</tr>
+		<tr>
+			<th>Zip Code:</th>
+			<th><input id="zip" type="text" name="zip" maxlength="9" minlength="5" required></th>
+		</tr>
+		
+	</table>
+	<br><button class='button' onclick="previousPage()">Previous
+		</button>
+	<button type="submit" class="button">Next</button>
+			
+</form>
+</body>
+</html>
